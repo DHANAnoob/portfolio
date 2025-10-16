@@ -1,0 +1,171 @@
+.skills-section {
+  background: var(--bg-secondary);
+  transition: background-color 0.3s ease;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill-card {
+  background: var(--bg-primary);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.skill-title {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.progress-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.skill-percent {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color), #45a049);
+  border-radius: 10px;
+  transition: width 1s ease;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tech-tag {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.tech-tag:hover {
+  transform: scale(1.1);
+}
+
+.tag-pink {
+  background: rgba(233, 30, 99, 0.1);
+  color: #e91e63;
+}
+
+.tag-blue {
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
+}
+
+.tag-purple {
+  background: rgba(156, 39, 176, 0.1);
+  color: #9c27b0;
+}
+
+.tag-red {
+  background: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+.tag-indigo {
+  background: rgba(63, 81, 181, 0.1);
+  color: #3f51b5;
+}
+
+.tag-green {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--accent-color);
+}
+
+.tag-orange {
+  background: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+}
+
+.tools-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.tool-item {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.tool-item:hover {
+  color: var(--accent-color);
+}
+
+.tool-item::before {
+  content: "✓";
+  color: var(--accent-color);
+  font-weight: bold;
+}

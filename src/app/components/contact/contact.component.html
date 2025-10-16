@@ -1,0 +1,115 @@
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title" @fadeInUp data-aos="fade-up">Get In Touch</h2>
+
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info" @fadeInUp data-aos="fade-right" data-aos-delay="200">
+        <h3 class="contact-subtitle" data-aos="fade-up">Let's Connect!</h3>
+        <p class="contact-intro">
+          I'm always interested in hearing about new projects and opportunities.
+          Whether you have a question or just want to say hi, feel free to reach
+          out!
+        </p>
+
+        <div class="info-cards">
+          <a href="mailto:jdhanasekar1999@gmail.com" class="info-card">
+            <div class="info-icon info-icon-green">📧</div>
+            <div>
+              <p class="info-label">Email</p>
+              <p class="info-value">jdhanasekar1999{{ "@" }}gmail.com</p>
+            </div>
+          </a>
+
+          <!-- <a href="tel:+919080531691" class="info-card">
+            <div class="info-icon info-icon-blue">📱</div>
+            <div>
+              <p class="info-label">Phone</p>
+              <p class="info-value">+91 90805 31691</p>
+            </div>
+          </a> -->
+
+          <div class="info-card">
+            <div class="info-icon info-icon-purple">📍</div>
+            <div>
+              <p class="info-label">Location</p>
+              <p class="info-value">Velachery, Chennai</p>
+            </div>
+          </div>
+
+          <a href="https://linkedin.com/in/dhanasekar" target="_blank" class="info-card">
+            <div class="info-icon info-icon-pink">🔗</div>
+            <div>
+              <p class="info-label">LinkedIn</p>
+              <p class="info-value">linkedin.com/in/dhanasekar</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Form with AJAX -->
+      <div class="contact-form-wrapper" @fadeInUp data-aos="fade-left" data-aos-delay="400">
+        @if (showSuccess) {
+        <div class="success-card" @scaleIn>
+          <div class="success-animation">
+            <div class="checkmark-circle">
+              <div class="checkmark-stem"></div>
+              <div class="checkmark-kick"></div>
+            </div>
+          </div>
+          <h3 class="success-title">Message Sent!</h3>
+          <p class="success-text">
+            Thank you for reaching out! I'll get back to you as soon as
+            possible.
+          </p>
+          <button (click)="resetForm()" class="reset-btn">
+            <span>Send Another Message</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M10 3L3 10L10 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M3 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+        } @else {
+        <form #contactForm class="contact-form" (submit)="onSubmit($event)">
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" name="name" [(ngModel)]="formData.name" required class="form-input"
+              placeholder="John Doe" [disabled]="isSubmitting" />
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" id="email" name="email" [(ngModel)]="formData.email" required class="form-input"
+              placeholder="john@example.com" [disabled]="isSubmitting" />
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" [(ngModel)]="formData.message" required rows="5" class="form-textarea"
+              placeholder="Your message here..." [disabled]="isSubmitting"></textarea>
+          </div>
+
+          @if (showError) {
+          <div class="error-message">
+            ❌ Something went wrong. Please try again or email me directly.
+          </div>
+          }
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn" [disabled]="isSubmitting">
+            @if (isSubmitting) {
+            <span>Sending... ⏳</span>
+            } @else {
+            <span>Send Message 🚀</span>
+            }
+          </button>
+        </form>
+        }
+      </div>
+    </div>
+  </div>
+</section>

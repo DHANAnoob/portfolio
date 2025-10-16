@@ -1,0 +1,76 @@
+<header class="header" @slideIn>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <h1>Dhanasekar J</h1>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav desktop-nav">
+        <a (click)="scrollToSection('hero')" class="nav-link">Home</a>
+        <a (click)="scrollToSection('about')" class="nav-link">About</a>
+        <a (click)="scrollToSection('skills')" class="nav-link">Skills</a>
+        <a (click)="scrollToSection('experience')" class="nav-link"
+          >Experience</a
+        >
+        <a (click)="scrollToSection('projects')" class="nav-link">Projects</a>
+        <a (click)="scrollToSection('contact')" class="nav-link">Contact</a>
+        <button (click)="onViewResume()" class="resume-btn">View Resume</button>
+      </nav>
+
+      <div class="header-actions">
+        <app-theme-toggle></app-theme-toggle>
+
+        <!-- Hamburger Menu Button -->
+        <button
+          class="hamburger"
+          [class.active]="isMenuOpen"
+          (click)="toggleMenu()"
+          aria-label="Toggle menu"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" [class.open]="isMenuOpen">
+      <a (click)="scrollToSection('hero'); closeMenu()" class="mobile-nav-link"
+        >Home</a
+      >
+      <a (click)="scrollToSection('about'); closeMenu()" class="mobile-nav-link"
+        >About</a
+      >
+      <a
+        (click)="scrollToSection('skills'); closeMenu()"
+        class="mobile-nav-link"
+        >Skills</a
+      >
+      <a
+        (click)="scrollToSection('experience'); closeMenu()"
+        class="mobile-nav-link"
+        >Experience</a
+      >
+      <a
+        (click)="scrollToSection('projects'); closeMenu()"
+        class="mobile-nav-link"
+        >Projects</a
+      >
+      <a
+        (click)="scrollToSection('contact'); closeMenu()"
+        class="mobile-nav-link"
+        >Contact</a
+      >
+      <button (click)="onViewResume(); closeMenu()" class="mobile-resume-btn">
+        View Resume
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Overlay for mobile menu -->
+@if (isMenuOpen) {
+<div class="mobile-overlay" (click)="closeMenu()"></div>
+}

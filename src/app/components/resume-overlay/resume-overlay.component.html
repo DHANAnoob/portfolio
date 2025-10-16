@@ -1,0 +1,126 @@
+<div class="overlay" @overlayAnimation (click)="onClose()">
+  <div class="modal" @modalAnimation (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="onClose()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div class="modal-content">
+      <div class="resume-header">
+        <h1>Dhanasekar J</h1>
+        <p class="subtitle">Junior Front-End Developer</p>
+        <div class="contact-info">
+          <span>📧 jdhanasekar1999{{ "@" }}gmail.com</span>
+          <span>📱 +91 90805 31691</span>
+          <span>📍 Velachery, Chennai</span>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h2>Professional Summary</h2>
+        <p>
+          Motivated Front-End Developer with 2+ years of experience specializing
+          in Angular (v16–20). Proficient in building scalable and responsive
+          web applications using modern UI frameworks and component libraries.
+          Adept at translating business requirements into efficient,
+          user-friendly interfaces.
+        </p>
+      </div>
+
+      <div class="resume-section">
+        <h2>Professional Experience</h2>
+        <div class="experience-item">
+          <h3>Junior Front-End Developer</h3>
+          <p class="company">
+            Dharstec Solutions Pvt. Ltd. | Sep 2023 – Present
+          </p>
+          <ul>
+            <li>
+              Built and maintained Angular-based applications for government and
+              private clients
+            </li>
+            <li>
+              Led UI development using Angular Material, Tailwind CSS, and Ant
+              Design (NG-ZORRO)
+            </li>
+            <li>Integrated REST APIs and deployed applications on AWS</li>
+            <li>
+              Collaborated with back-end teams to design scalable workflows
+            </li>
+          </ul>
+        </div>
+        <div class="experience-item">
+          <h3>Frontend Development Intern</h3>
+          <p class="company">
+            Dharstec Solutions Pvt. Ltd. | Jun 2023 – Aug 2023
+          </p>
+          <ul>
+            <li>Gained hands-on experience in real-time UI development</li>
+            <li>
+              Practiced code management using GitHub and implemented responsive
+              designs
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Languages</h4>
+            <p>JavaScript, HTML, CSS, Python (Basics)</p>
+          </div>
+          <div class="skill-category">
+            <h4>Frameworks/Libraries</h4>
+            <p>
+              Angular 16–20, Angular Ionic, Bootstrap, Tailwind CSS, Angular
+              Material, Node.js, Express
+            </p>
+          </div>
+          <div class="skill-category">
+            <h4>Tools & Platforms</h4>
+            <p>GitHub, AWS, REST API Integration, Responsive Design</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h2>Education</h2>
+        <div class="education-item">
+          <h3>B.E. Mechanical Engineering</h3>
+          <p>
+            St. Joseph's Institute of Technology, Chennai | 2017-2021 | 7.52
+            CGPA
+          </p>
+        </div>
+        <div class="education-item">
+          <h3>HSC</h3>
+          <p>G.H.S.S Velachery | 2017 | 87%</p>
+        </div>
+        <div class="education-item">
+          <h3>SSLC</h3>
+          <p>G.H.S.S Velachery | 2015 | 93%</p>
+        </div>
+      </div>
+
+      <div class="resume-section">
+        <h2>Certifications</h2>
+        <ul>
+          <li>
+            Frontend Development Course - Login 360, Chennai (Dec 2022 – Apr
+            2023)
+          </li>
+          <li>Cambridge English Entry Level - Preliminary (2018)</li>
+          <li>Goodwin Motors Skill Development Training (2019)</li>
+        </ul>
+      </div>
+
+      <button class="download-btn" (click)="downloadResume()">
+        Download PDF Resume
+      </button>
+    </div>
+  </div>
+</div>

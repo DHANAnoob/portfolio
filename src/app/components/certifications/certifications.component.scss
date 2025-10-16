@@ -1,0 +1,131 @@
+.certifications-section {
+  background: var(--bg-secondary);
+  transition: background-color 0.3s ease;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.cert-card {
+  background: var(--bg-primary);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.cert-icon {
+  font-size: 3rem;
+}
+
+.cert-badge {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--accent-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cert-badge-blue {
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
+}
+
+.cert-badge-orange {
+  background: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+}
+
+.cert-title {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.cert-issuer {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.cert-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.cert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cert-tag {
+  background: var(--bg-secondary);
+  color: var(--accent-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cert-card-special {
+  background: linear-gradient(135deg, #9c27b0, #e91e63);
+  color: white;
+}
+
+.cert-icon-large {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.cert-title-white {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cert-description-white {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.learning-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: white;
+}
+
+.learning-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

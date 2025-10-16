@@ -1,0 +1,129 @@
+.about-section {
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+.section-title {
+  color: var(--text-primary);
+  margin-bottom: 3rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.highlight {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.highlight-bold {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.info-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.badge {
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-3px);
+}
+
+.badge-location {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--accent-color);
+}
+
+.badge-experience {
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
+}
+
+.badge-education {
+  background: rgba(156, 39, 176, 0.1);
+  color: #9c27b0;
+}
+
+.about-card {
+  position: relative;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, var(--accent-color), #2196f3);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card-gradient:hover {
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.facts-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.fact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: white;
+}
+
+.fact-icon {
+  font-size: 1.8rem;
+}
+
+.fact-label {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+}
+
+.fact-value {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}

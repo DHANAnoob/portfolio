@@ -1,0 +1,30 @@
+<section id="hero" class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <!-- Profile Image - Fade from Right -->
+      <div class="hero-image-wrapper" data-aos="fade-left" data-aos-duration="1200">
+        <div class="image-blob"></div>
+        <img src="profile.png" alt="Dhanasekar J" class="profile-image" />
+      </div>
+
+      <!-- Hero Text - Fade from Left -->
+      <div class="hero-text" data-aos="fade-right" data-aos-duration="1200">
+        <h2 class="greeting">Hello, I'm</h2>
+        <h1 class="name">Dhanasekar J</h1>
+        <div class="title-container">
+          <p class="title">{{ titles[currentTitleIndex] }}</p>
+        </div>
+        <p class="description">
+          Motivated Front-End Developer with 2+ years of experience specializing in Angular.
+          Passionate about building scalable, responsive web applications with modern UI frameworks.
+        </p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary" (click)="scrollToContact()">Get In Touch</button>
+          <a href="https://github.com/yourusername" target="_blank" class="btn btn-secondary">
+            View GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,123 @@
+.education-section {
+  background: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .education-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.education-card {
+  background: var(--bg-secondary);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border-top: 4px solid;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-green {
+  border-color: var(--accent-color);
+}
+
+.card-purple {
+  border-color: #9c27b0;
+}
+
+.card-blue {
+  border-color: #2196f3;
+}
+
+.education-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.education-year {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card-green .education-year {
+  background: rgba(76, 175, 80, 0.1);
+  color: var(--accent-color);
+}
+
+.card-purple .education-year {
+  background: rgba(156, 39, 176, 0.1);
+  color: #9c27b0;
+}
+
+.card-blue .education-year {
+  background: rgba(33, 150, 243, 0.1);
+  color: #2196f3;
+}
+
+.education-degree {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.education-major {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.card-green .education-major {
+  color: var(--accent-color);
+}
+
+.card-purple .education-major {
+  color: #9c27b0;
+}
+
+.card-blue .education-major {
+  color: #2196f3;
+}
+
+.education-school {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.education-grade {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.card-green .education-grade {
+  background: var(--accent-color);
+}
+
+.card-purple .education-grade {
+  background: #9c27b0;
+}
+
+.card-blue .education-grade {
+  background: #2196f3;
+}
