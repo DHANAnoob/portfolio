@@ -1,6 +1,6 @@
 [build]
-  command = "npm install --legacy-peer-deps && ng build"
-  publish = "dist/portfolio/browser"
+  command = "npm install --legacy-peer-deps && npm run build:prod"
+  publish = "dist/portfolio-dhanasekar/browser"
 
 [[redirects]]
   from = "/*"
@@ -9,4 +9,3 @@
 
 [build.environment]
   NODE_VERSION = "18"
-  NPM_FLAGS = "--legacy-peer-deps"
