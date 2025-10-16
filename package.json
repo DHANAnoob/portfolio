@@ -1,12 +1,14 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-dhanasekar",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "netlify": "npm install --legacy-peer-deps && ng build --configuration production"
   },
   "private": true,
   "dependencies": {
