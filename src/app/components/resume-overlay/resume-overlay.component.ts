@@ -19,7 +19,7 @@ export class ResumeOverlayComponent {
 
   downloadResume(): void {
     const link = document.createElement('a');
-    link.href = 'resume.pdf';
+    link.href = 'Dhanasekar-J-Resume.pdf';
     link.download = 'Dhanasekar-J-Resume.pdf';
     link.click();
   }
