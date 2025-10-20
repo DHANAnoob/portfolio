@@ -37,6 +37,7 @@ import { FooterComponent } from './components/footer/footer.component';
 })
 export class AppComponent implements OnInit {
   showResumeOverlay = false;
+  currentYear = new Date().getFullYear();
 
   ngOnInit(): void {
     // Initialize AOS
